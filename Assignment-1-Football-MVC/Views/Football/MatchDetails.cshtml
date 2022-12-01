@@ -1,0 +1,40 @@
+﻿@model List<Assignment_1_Football_MVC.Context.FootballLeague>
+@{
+    ViewBag.Title = "Details";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Deatails</title>
+</head>
+<body>
+    <div> 
+      <table class="table table-bordered">
+          <tr>
+              <th>Match ID</th>
+              <th>Team Name 1</th>
+              <th>Team Name 2</th>
+              <th>Match Status</th>
+              <th>Winning Team</th>
+              <th>Points</th>
+          </tr>
+
+          @foreach(var item in Model) {
+          <tr>
+              <td>@item.MatchId</td>
+              <td>@item.TeamName1</td>
+              <td>@item.TeamName2</td>
+              <td>@item.Status</td>
+              <td>@item.WinningTeam</td>
+              <td>@item.Points</td>
+          </tr>
+              }
+
+          
+      </table>
+    </div>
+</body>
+</html>
